@@ -1,0 +1,14 @@
+{
+  "type": "transactionCreated",
+  "effectiveTimestamp": "2025-02-03T00:00:00",
+  "transactionId": "transaction1",
+  "consumerId": "consumer1",
+  "amount": {
+    "number": 150.00,
+    "currency": "EUR"
+  },
+  "transactionType": "PayIn3",
+  "metadata": {
+    "DatasetId": "b61afc4f-4b88-45fa-b2b9-d35b86bc723f"
+  }
+}
