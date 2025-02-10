@@ -5,5 +5,5 @@
   "transactionId": "txn-67890",
   "accountId": "acc-zyxwv9876",
   "consumerId": "cons-abcdef",
-  "reason": "sent-to-collections"
+  "reason": "ConsumerDefault"
 }

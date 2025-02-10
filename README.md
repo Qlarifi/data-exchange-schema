@@ -1,7 +1,7 @@
 # Data Exchange Schema
 
 ## Events
-### [TransactionCreated](\events\transactioncreated.json)
+### [TransactionCreated](./events/transactionCreated.json)
 
 **type**: Indicates the event type.
 
@@ -19,7 +19,7 @@
 
 **transactionType**: The type of transaction product, Possible values are: `PayIn3`, `PayIn4`, `PayIn30Days`.
 
-### [InstallmentIssued](\events\installmentIssued)
+### [InstallmentIssued](./events/installmentIssued.json)
 
 **type**: Indicates the event type.
 
@@ -41,7 +41,7 @@
 
 **index**: The sequential order of this instalment within the transaction.
 
-### [InstallmentPaid](\events\installmentPaid)
+### [InstallmentPaid](./events/installmentPaid.json)
 
 **type**: Indicates the event type.
 
@@ -59,7 +59,7 @@
 
 **amount.currency**: The currency of the payment.
 
-### [InstallmentPostponed](\events\installmentPostponed)
+### [InstallmentPostponed](./events/installmentPostponed.json)
 
 **type**: Indicates the event type.
 
@@ -77,9 +77,9 @@
 
 **feeAmount.currency**: The currency of the fee.
 
-**postponedType**: The type of postponed action. Possible values are Customer, LenderCommercial, LenderTechnical.
+**postponedType**: The type of postponed action. Possible values are `ConsumerRequest`, `LenderCommercial`, `LenderTechnical`.
 
-### [FeeIssued](\events\feeIssued)
+### [FeeIssued](./events/feeIssued.json)
 
 **type**: Indicates the event type.
 
@@ -97,9 +97,9 @@
 
 **penaltyAmount.currency**: The currency of the penalty.
 
-**penaltyType**: The type of penalty fee that was added to the transaction amount. Possible values are: LateFee, PostponedFee,Interest, Other.
+**penaltyType**: The type of penalty fee that was added to the transaction amount. Possible values are: `LateFee`, `PostponedFee`, `Interest`, `Other`.
 
-### [FeePaid](\events\feePaid)
+### [FeePaid](./events/feePaid.json)
 
 **type**: Indicates the event type.
 
@@ -117,7 +117,7 @@
 
 **amount.currency**: The currency of the payment.
 
-### [RefundIssued](\events\refundIssued)
+### [RefundIssued](./events/refundIssued.json)
 
 **type**: Indicates the event type.
 
@@ -135,7 +135,7 @@
 
 **refundAmount.currency**: The currency of the refund.
 
-### [InstallmentRebalanced](\events\installmentRebalanced)
+### [InstallmentRebalanced](./events/installmentRebalanced.json)
 
 **type**: Indicates the event type.
 
@@ -153,7 +153,7 @@
 
 **newAmountDue.currency**: The currency of the new amount due.
 
-### [InstallmentWrittenOff](\events\installmentWrittenOff.json)
+### [InstallmentWrittenOff](./events/installmentWrittenOff.json)
 
 **type**: Indicates the event type.
 
@@ -167,7 +167,9 @@
 
 **consumerId**: The unique identifier of the consumer whose instalment was written off.
 
-### [InstallmentCanceled](\events\installmentCanceled.json)
+**reason**: The reason for the write-off. Possible values are: `ConsumerDefault` (sent to collections), `LenderCommercial`, `LenderTechnical`.
+
+### [InstallmentCanceled](./events/installmentCanceled.json)
 
 **type**: Indicates the event type.
 
@@ -273,7 +275,7 @@ Transaction that results in 2 orders of 3 installments, with pay on ship.
 | 2025-04-09 00:00:00 | installmentPaid    | order-2  | installment-3  | 16.67 EUR  |                  |                     |       |                                                             |
 
 ### Scenario 7
-Transaction with 3 installments, and a refund greater than what the customer already paid back.
+Transaction with 3 installments, and a refund greater than what the consumer already paid back.
 Refund is applied from the last installment backwards.
 
 | Effective Timestamp | Type                  | Order ID | Installment ID | Amount     | Transaction Type | Due Timestamp       | Index | Additional Details | Column 1                             |
@@ -289,7 +291,7 @@ Refund is applied from the last installment backwards.
 | 2025-02-03 00:00:00 | installmentRebalanced | order-1  | installment-1  | 40 EUR     |                  |                     |       | Refunded           | Lender refunds the consumer card €10 |
 
 ### Scenario 8
-Transaction with 3 installments, and a refund greater than what the customer already paid back
+Transaction with 3 installments, and a refund greater than what the consumer already paid back
 Refund is evenly split across the 3 installments.
 
 | Effective Timestamp | Type                  | Order ID | Installment ID | Amount     | Transaction Type | Due Timestamp       | Index | Additional Details |                                         |
