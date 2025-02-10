@@ -4,5 +4,6 @@
   "installmentId": "inst-12345",
   "transactionId": "txn-67890",
   "accountId": "acc-zyxwv9876",
-  "consumerId": "cons-abcdef"
+  "consumerId": "cons-abcdef",
+  "reason": "ConsumerDefault"
 }
