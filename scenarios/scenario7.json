@@ -4,8 +4,10 @@
     "effectiveTimestamp": "2025-02-03T00:00:00",
     "transactionId": "transaction1",
     "consumerId": "consumer1",
-    "amount.number": 150,
-    "amount.currency": "EUR",
+    "amount": {
+      "number": 150,
+      "currency": "EUR"
+    },
     "transactionType": "PayIn3",
     "metadata": {
       "DatasetId": "4565466c-4c74-42b3-b4d5-1606d1d89fce"
@@ -18,8 +20,10 @@
     "orderId": "order1",
     "transactionId": "transaction1",
     "consumerId": "consumer1",
-    "amount.number": 50,
-    "amount.currency": "EUR",
+    "amount": {
+      "number": 50,
+      "currency": "EUR"
+    },
     "dueTimestamp": "2025-02-03T00:00:00",
     "index": 0,
     "metadata": {
@@ -33,8 +37,10 @@
     "orderId": "order1",
     "transactionId": "transaction1",
     "consumerId": "consumer1",
-    "amount.number": 50,
-    "amount.currency": "EUR",
+    "amount": {
+      "number": 50,
+      "currency": "EUR"
+    },
     "dueTimestamp": "2025-03-05T00:00:00",
     "index": 1,
     "metadata": {
@@ -48,8 +54,10 @@
     "orderId": "order1",
     "transactionId": "transaction1",
     "consumerId": "consumer1",
-    "amount.number": 50,
-    "amount.currency": "EUR",
+    "amount": {
+      "number": 50,
+      "currency": "EUR"
+    },
     "dueTimestamp": "2025-04-04T00:00:00",
     "index": 2,
     "metadata": {
@@ -63,8 +71,10 @@
     "orderId": "order1",
     "transactionId": "transaction1",
     "consumerId": "consumer1",
-    "amount.number": 50,
-    "amount.currency": "EUR",
+    "amount": {
+      "number": 50,
+      "currency": "EUR"
+    },
     "metadata": {
       "DatasetId": "4565466c-4c74-42b3-b4d5-1606d1d89fce"
     }
@@ -76,8 +86,10 @@
     "orderId": "order1",
     "transactionId": "transaction1",
     "consumerId": "consumer1",
-    "amount.number": 110,
-    "amount.currency": "EUR",
+    "amount": {
+      "number": 110,
+      "currency": "EUR"
+    },
     "metadata": {
       "DatasetId": "4565466c-4c74-42b3-b4d5-1606d1d89fce"
     }
