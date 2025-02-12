@@ -102,8 +102,10 @@
     "transactionId": "transaction1",
     "consumerId": "consumer1",
     "newDueTimestamp": "2025-03-05T00:00:00+00:00",
-    "newAmountDue.number": 0,
-    "newAmountDue.currency": "EUR",
+    "newAmountDue": {
+      "number": 0,
+      "currency": "EUR"
+    },
     "reason": "refunded",
     "metadata": {
       "DatasetId": "4565466c-4c74-42b3-b4d5-1606d1d89fce"
@@ -117,8 +119,10 @@
     "transactionId": "transaction1",
     "consumerId": "consumer1",
     "newDueTimestamp": "2025-03-05T00:00:00+00:00",
-    "newAmountDue.number": 0,
-    "newAmountDue.currency": "EUR",
+    "newAmountDue": {
+      "number": 0,
+      "currency": "EUR"
+    },
     "reason": "refunded",
     "metadata": {
       "DatasetId": "4565466c-4c74-42b3-b4d5-1606d1d89fce"
