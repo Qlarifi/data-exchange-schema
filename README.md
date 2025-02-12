@@ -291,7 +291,7 @@ Refund is applied from the last installment backwards.
 | 2025-02-03 00:00:00 | installmentRebalanced | order-1  | installment-1  | 40 EUR     |                  |                     |       | Refunded           | Lender refunds the consumer card €10 |
 
 ### Scenario 8
-Transaction with 3 installments, and a refund greater than what the consumer already paid back
+Transaction with 3 installments, and a refund greater than what the consumer already paid back.
 Refund is evenly split across the 3 installments.
 
 | Effective Timestamp | Type                  | Order ID | Installment ID | Amount     | Transaction Type | Due Timestamp       | Index | Additional Details |                                         |
@@ -307,3 +307,17 @@ Refund is evenly split across the 3 installments.
 | 2025-02-05 00:00:00 | installmentRebalanced | order-1  | installment-3  | 13.34 EUR  |                  |                     |       | Refunded           |                                         |
 | 2025-03-05 00:00:00 | installmentPaid       | order-1  | installment-2  | 13.33 EUR  |                  |                     |       |                    |                                         |
 | 2025-04-04 00:00:00 | installmentPaid       | order-1  | installment-3  | 13.34 EUR  |                  |                     |       |                    |                                         |
+
+### Scenario 9
+Transaction with 3 installments. 2nd & 3rd installment late, then written off (sent to collections).
+
+| Effective Timestamp | Type                  | Order ID | Installment ID | Amount     | Transaction Type | Due Timestamp       | Index | Additional Details |
+| ------------------- | --------------------- | -------- | -------------- | ---------- | ---------------- | ------------------- | ----- | ------------------ |
+| 2025-02-03 00:00:00 | transactionCreated    |          |                | 150.00 EUR | PayIn3           |                     |       |                    |
+| 2025-02-03 00:00:00 | installmentIssued     | order-1  | installment-1  | 50 EUR     |                  | 2025-02-03 00:00:00 | 0     |                    |
+| 2025-02-03 00:00:00 | installmentIssued     | order-1  | installment-2  | 50 EUR     |                  | 2025-03-05 00:00:00 | 1     |                    |
+| 2025-02-03 00:00:00 | installmentIssued     | order-1  | installment-3  | 50 EUR     |                  | 2025-04-04 00:00:00 | 2     |                    |
+| 2025-02-03 00:00:00 | installmentPaid       | order-1  | installment-1  | 50 EUR     |                  |                     |       |                    |
+| 2025-09-01 00:00:00 | installmentWrittenOff | order-1  | installment-2  | 50 EUR     |                  |                     |       | ConsumerDefault    |
+| 2025-09-01 00:00:00 | installmentWrittenOff | order-1  | installment-3  | 50 EUR     |                  |                     |       | ConsumerDefault    |
+
