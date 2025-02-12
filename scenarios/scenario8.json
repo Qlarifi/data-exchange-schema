@@ -102,7 +102,7 @@
     "transactionId": "transaction1",
     "consumerId": "consumer1",
     "newDueTimestamp": "2025-03-05T00:00:00+00:00",
-    "amount": {
+    "newAmountDue": {
       "number": 13.33,
       "currency": "EUR"
     },
@@ -119,7 +119,7 @@
     "transactionId": "transaction1",
     "consumerId": "consumer1",
     "newDueTimestamp": "2025-03-05T00:00:00+00:00",
-    "amount": {
+    "newAmountDue": {
       "number": 13.33,
       "currency": "EUR"
     },
@@ -136,7 +136,7 @@
     "transactionId": "transaction1",
     "consumerId": "consumer1",
     "newDueTimestamp": "2025-03-05T00:00:00+00:00",
-    "amount": {
+    "newAmountDue": {
       "number": 13.34,
       "currency": "EUR"
     },
