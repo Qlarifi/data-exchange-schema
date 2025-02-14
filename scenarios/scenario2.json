@@ -21,7 +21,7 @@
     "transactionId": "transaction1",
     "consumerId": "consumer1",
     "amount": {
-      "number": 50,
+      "number": 50.00,
       "currency": "EUR"
     },
     "dueTimestamp": "2025-02-03T00:00:00",
@@ -38,7 +38,7 @@
     "transactionId": "transaction1",
     "consumerId": "consumer1",
     "amount": {
-      "number": 50,
+      "number": 50.00,
       "currency": "EUR"
     },
     "dueTimestamp": "2025-03-05T00:00:00",
@@ -55,7 +55,7 @@
     "transactionId": "transaction1",
     "consumerId": "consumer1",
     "amount": {
-      "number": 50,
+      "number": 50.00,
       "currency": "EUR"
     },
     "dueTimestamp": "2025-04-04T00:00:00",
@@ -72,7 +72,7 @@
     "transactionId": "transaction1",
     "consumerId": "consumer1",
     "amount": {
-      "number": 50,
+      "number": 50.00,
       "currency": "EUR"
     },
     "metadata": {
@@ -126,7 +126,7 @@
     "transactionId": "transaction1",
     "consumerId": "consumer1",
     "amount": {
-      "number": 50,
+      "number": 50.00,
       "currency": "EUR"
     },
     "metadata": {
@@ -153,7 +153,7 @@
     "transactionId": "transaction1",
     "consumerId": "consumer1",
     "amount": {
-      "number": 50,
+      "number": 50.00,
       "currency": "EUR"
     },
     "metadata": {
