@@ -5,7 +5,7 @@
     "transactionId": "transaction1",
     "consumerId": "consumer1",
     "amount": {
-      "number": 150.00,
+      "number": 150.0,
       "currency": "EUR"
     },
     "transactionType": "PayIn3",
@@ -17,11 +17,10 @@
     "type": "installmentIssued",
     "effectiveTimestamp": "2025-02-03T00:00:00",
     "installmentId": "installment1",
-    "orderId": "order1",
     "transactionId": "transaction1",
     "consumerId": "consumer1",
     "amount": {
-      "number": 50.00,
+      "number": 50.0,
       "currency": "EUR"
     },
     "dueTimestamp": "2025-02-03T00:00:00",
@@ -34,11 +33,10 @@
     "type": "installmentIssued",
     "effectiveTimestamp": "2025-02-03T00:00:00",
     "installmentId": "installment2",
-    "orderId": "order1",
     "transactionId": "transaction1",
     "consumerId": "consumer1",
     "amount": {
-      "number": 50.00,
+      "number": 50.0,
       "currency": "EUR"
     },
     "dueTimestamp": "2025-03-05T00:00:00",
@@ -51,11 +49,10 @@
     "type": "installmentIssued",
     "effectiveTimestamp": "2025-02-03T00:00:00",
     "installmentId": "installment3",
-    "orderId": "order1",
     "transactionId": "transaction1",
     "consumerId": "consumer1",
     "amount": {
-      "number": 50.00,
+      "number": 50.0,
       "currency": "EUR"
     },
     "dueTimestamp": "2025-04-04T00:00:00",
@@ -68,11 +65,10 @@
     "type": "installmentPaid",
     "effectiveTimestamp": "2025-02-03T00:00:00",
     "installmentId": "installment1",
-    "orderId": "order1",
     "transactionId": "transaction1",
     "consumerId": "consumer1",
     "amount": {
-      "number": 50.00,
+      "number": 50.0,
       "currency": "EUR"
     },
     "metadata": {
@@ -83,11 +79,10 @@
     "type": "feeIssued",
     "effectiveTimestamp": "2025-03-08T00:00:00",
     "installmentId": "installment2",
-    "orderId": "order1",
     "transactionId": "transaction1",
     "consumerId": "consumer1",
     "feeAmount": {
-      "number": 3.00,
+      "number": 3.0,
       "currency": "EUR"
     },
     "feeType": "LateFee",
@@ -99,11 +94,10 @@
     "type": "installmentPaid",
     "effectiveTimestamp": "2025-03-11T00:00:00",
     "installmentId": "installment2",
-    "orderId": "order1",
     "transactionId": "transaction1",
     "consumerId": "consumer1",
     "amount": {
-      "number": 50.00,
+      "number": 50.0,
       "currency": "EUR"
     },
     "metadata": {
@@ -114,11 +108,10 @@
     "type": "feePaid",
     "effectiveTimestamp": "2025-03-11T00:00:00",
     "installmentId": "installment2",
-    "orderId": "order1",
     "transactionId": "transaction1",
     "consumerId": "consumer1",
     "amount": {
-      "number": 3.00,
+      "number": 3.0,
       "currency": "EUR"
     },
     "metadata": {
@@ -129,11 +122,10 @@
     "type": "installmentPaid",
     "effectiveTimestamp": "2025-04-04T00:00:00",
     "installmentId": "installment3",
-    "orderId": "order1",
     "transactionId": "transaction1",
     "consumerId": "consumer1",
     "amount": {
-      "number": 50.00,
+      "number": 50.0,
       "currency": "EUR"
     },
     "metadata": {

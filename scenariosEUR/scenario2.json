@@ -5,10 +5,10 @@
     "transactionId": "transaction1",
     "consumerId": "consumer1",
     "amount": {
-      "number": 150.00,
+      "number": 150.0,
       "currency": "EUR"
     },
-    "transactionType":"PayIn3",
+    "transactionType": "PayIn3",
     "metadata": {
       "DatasetId": "a8c5c056-6966-4c04-b450-56cf875727ba"
     }
@@ -17,11 +17,10 @@
     "type": "installmentIssued",
     "effectiveTimestamp": "2025-02-03T00:00:00",
     "installmentId": "installment1",
-    "orderId": "order1",
     "transactionId": "transaction1",
     "consumerId": "consumer1",
     "amount": {
-      "number": 50.00,
+      "number": 50.0,
       "currency": "EUR"
     },
     "dueTimestamp": "2025-02-03T00:00:00",
@@ -34,11 +33,10 @@
     "type": "installmentIssued",
     "effectiveTimestamp": "2025-02-03T00:00:00",
     "installmentId": "installment2",
-    "orderId": "order1",
     "transactionId": "transaction1",
     "consumerId": "consumer1",
     "amount": {
-      "number": 50.00,
+      "number": 50.0,
       "currency": "EUR"
     },
     "dueTimestamp": "2025-03-05T00:00:00",
@@ -51,11 +49,10 @@
     "type": "installmentIssued",
     "effectiveTimestamp": "2025-02-03T00:00:00",
     "installmentId": "installment3",
-    "orderId": "order1",
     "transactionId": "transaction1",
     "consumerId": "consumer1",
     "amount": {
-      "number": 50.00,
+      "number": 50.0,
       "currency": "EUR"
     },
     "dueTimestamp": "2025-04-04T00:00:00",
@@ -68,11 +65,10 @@
     "type": "installmentPaid",
     "effectiveTimestamp": "2025-02-03T00:00:00Z",
     "installmentId": "installment1",
-    "orderId": "order1",
     "transactionId": "transaction1",
     "consumerId": "consumer1",
     "amount": {
-      "number": 50.00,
+      "number": 50.0,
       "currency": "EUR"
     },
     "metadata": {
@@ -83,7 +79,6 @@
     "type": "installmentPostponed",
     "effectiveTimestamp": "2025-03-04T00:00:00",
     "installmentId": "installment2",
-    "orderId": "order1",
     "transactionId": "transaction1",
     "consumerId": "consumer1",
     "newDueTimestamp": "2025-03-12T00:00:00+00:00",
@@ -96,7 +91,6 @@
     "type": "installmentPostponed",
     "effectiveTimestamp": "2025-03-04T00:00:00",
     "installmentId": "installment3",
-    "orderId": "order1",
     "transactionId": "transaction1",
     "consumerId": "consumer1",
     "newDueTimestamp": "2025-04-11T00:00:00+00:00",
@@ -109,11 +103,10 @@
     "type": "feeIssued",
     "effectiveTimestamp": "2025-03-04T00:00:00",
     "installmentId": "installment2",
-    "orderId": "order1",
     "transactionId": "transaction1",
     "consumerId": "consumer1",
     "penaltyAmount": {
-      "number": 2.00,
+      "number": 2.0,
       "currency": "EUR"
     },
     "feeType": "PostponedFee"
@@ -122,11 +115,10 @@
     "type": "installmentPaid",
     "effectiveTimestamp": "2025-03-12T00:00:00",
     "installmentId": "installment2",
-    "orderId": "order1",
     "transactionId": "transaction1",
     "consumerId": "consumer1",
     "amount": {
-      "number": 50.00,
+      "number": 50.0,
       "currency": "EUR"
     },
     "metadata": {
@@ -137,11 +129,10 @@
     "type": "feePaid",
     "effectiveTimestamp": "2025-03-12T00:00:00",
     "installmentId": "installment3",
-    "orderId": "order1",
     "transactionId": "transaction1",
     "consumerId": "consumer1",
     "amount": {
-      "number": 2.00,
+      "number": 2.0,
       "currency": "EUR"
     }
   },
@@ -149,11 +140,10 @@
     "type": "installmentPaid",
     "effectiveTimestamp": "2025-04-11T00:00:00",
     "installmentId": "installment3",
-    "orderId": "order1",
     "transactionId": "transaction1",
     "consumerId": "consumer1",
     "amount": {
-      "number": 50.00,
+      "number": 50.0,
       "currency": "EUR"
     },
     "metadata": {

@@ -5,7 +5,7 @@
     "transactionId": "transaction1",
     "consumerId": "consumer1",
     "amount": {
-      "number": 150.00,
+      "number": 150.0,
       "currency": "EUR"
     },
     "metadata": {
@@ -16,7 +16,6 @@
     "type": "installmentIssued",
     "effectiveTimestamp": "2025-02-04T00:00:00",
     "installmentId": "installment1",
-    "orderId": "order1",
     "transactionId": "transaction1",
     "consumerId": "consumer1",
     "amount": {
@@ -33,7 +32,6 @@
     "type": "installmentIssued",
     "effectiveTimestamp": "2025-02-04T00:00:00",
     "installmentId": "installment2",
-    "orderId": "order1",
     "transactionId": "transaction1",
     "consumerId": "consumer1",
     "amount": {
@@ -50,7 +48,6 @@
     "type": "installmentIssued",
     "effectiveTimestamp": "2025-02-04T00:00:00",
     "installmentId": "installment3",
-    "orderId": "order1",
     "transactionId": "transaction1",
     "consumerId": "consumer1",
     "amount": {
@@ -67,7 +64,6 @@
     "type": "installmentPaid",
     "effectiveTimestamp": "2025-02-04T00:00:00Z",
     "installmentId": "installment1",
-    "orderId": "order1",
     "transactionId": "transaction1",
     "consumerId": "consumer1",
     "amount": {
@@ -82,7 +78,6 @@
     "type": "installmentIssued",
     "effectiveTimestamp": "2025-02-08T00:00:00",
     "installmentId": "installment1",
-    "orderId": "order2",
     "transactionId": "transaction1",
     "consumerId": "consumer1",
     "amount": {
@@ -99,7 +94,6 @@
     "type": "installmentIssued",
     "effectiveTimestamp": "2025-02-08T00:00:00",
     "installmentId": "installment2",
-    "orderId": "order2",
     "transactionId": "transaction1",
     "consumerId": "consumer1",
     "amount": {
@@ -116,7 +110,6 @@
     "type": "installmentIssued",
     "effectiveTimestamp": "2025-02-08T00:00:00",
     "installmentId": "installment3",
-    "orderId": "order2",
     "transactionId": "transaction1",
     "consumerId": "consumer1",
     "amount": {
@@ -133,7 +126,6 @@
     "type": "installmentPaid",
     "effectiveTimestamp": "2025-02-08T00:00:00Z",
     "installmentId": "installment1",
-    "orderId": "order2",
     "transactionId": "transaction1",
     "consumerId": "consumer1",
     "amount": {
@@ -148,7 +140,6 @@
     "type": "installmentPaid",
     "effectiveTimestamp": "2025-03-06T00:00:00Z",
     "installmentId": "installment2",
-    "orderId": "order1",
     "transactionId": "transaction1",
     "consumerId": "consumer1",
     "amount": {
@@ -163,7 +154,6 @@
     "type": "installmentPaid",
     "effectiveTimestamp": "2025-03-10T00:00:00Z",
     "installmentId": "installment2",
-    "orderId": "order2",
     "transactionId": "transaction1",
     "consumerId": "consumer1",
     "amount": {
@@ -178,7 +168,6 @@
     "type": "installmentPaid",
     "effectiveTimestamp": "2025-04-05T00:00:00Z",
     "installmentId": "installment3",
-    "orderId": "order1",
     "transactionId": "transaction1",
     "consumerId": "consumer1",
     "amount": {
@@ -193,7 +182,6 @@
     "type": "installmentPaid",
     "effectiveTimestamp": "2025-04-09T00:00:00Z",
     "installmentId": "installment3",
-    "orderId": "order2",
     "transactionId": "transaction1",
     "consumerId": "consumer1",
     "amount": {
