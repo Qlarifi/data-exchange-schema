@@ -7,5 +7,5 @@ The events are documented in the [Event Field Reference](./EventFieldReference.m
 ## Scenarios
 We have put together a few scenarios to align on the data exchange schema. These scenarios are based on the payment plan types and the possible transactions that can occur within them. The scenarios are not exhaustive but should cover the most common cases.
 
-For European customers, we have listed the scenarios in the [EU Scenarios](./ScenariosEUR.md) document.
-For US customers, we have listed the scenarios in the [US Scenarios](./ScenariosUSD.md) document.
+For European customers, we have listed the scenarios in the [EU Scenarios](./scenariosEUR.md) document.
+For US customers, we have listed the scenarios in the [US Scenarios](./scenariosUSD.md) document.
