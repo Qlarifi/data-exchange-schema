@@ -2,7 +2,6 @@
   "type": "installmentIssued",
   "effectiveTimestamp": "2025-02-03T00:00:00",
   "installmentId": "installment1",
-  "orderId": "order1",
   "transactionId": "transaction1",
   "consumerId": "consumer1",
   "amount": {

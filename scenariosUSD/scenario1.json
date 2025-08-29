@@ -5,10 +5,10 @@
     "transactionId": "transaction1",
     "consumerId": "consumer1",
     "amount": {
-      "number": 150.00,
-      "currency": "EUR"
+      "number": 200.0,
+      "currency": "USD"
     },
-    "transactionType": "PayIn3",
+    "transactionType": "PayIn4",
     "metadata": {
       "DatasetId": "b61afc4f-4b88-45fa-b2b9-d35b86bc723f"
     }
@@ -17,12 +17,11 @@
     "type": "installmentIssued",
     "effectiveTimestamp": "2025-02-03T00:00:00",
     "installmentId": "installment1",
-    "orderId": "order1",
     "transactionId": "transaction1",
     "consumerId": "consumer1",
     "amount": {
-      "number": 50.00,
-      "currency": "EUR"
+      "number": 50.0,
+      "currency": "USD"
     },
     "dueTimestamp": "2025-02-03T00:00:00",
     "index": 0,
@@ -34,14 +33,13 @@
     "type": "installmentIssued",
     "effectiveTimestamp": "2025-02-03T00:00:00",
     "installmentId": "installment2",
-    "orderId": "order1",
     "transactionId": "transaction1",
     "consumerId": "consumer1",
     "amount": {
-      "number": 50.00,
-      "currency": "EUR"
+      "number": 50.0,
+      "currency": "USD"
     },
-    "dueTimestamp": "2025-03-05T00:00:00",
+    "dueTimestamp": "2025-02-17T00:00:00",
     "index": 1,
     "metadata": {
       "DatasetId": "b651f073-abd0-4ad2-bb12-45c538284065"
@@ -51,15 +49,30 @@
     "type": "installmentIssued",
     "effectiveTimestamp": "2025-02-03T00:00:00",
     "installmentId": "installment3",
-    "orderId": "order1",
     "transactionId": "transaction1",
     "consumerId": "consumer1",
     "amount": {
-      "number": 50.00,
-      "currency": "EUR"
+      "number": 50.0,
+      "currency": "USD"
     },
-    "dueTimestamp": "2025-04-04T00:00:00",
+    "dueTimestamp": "2025-03-03T00:00:00",
     "index": 2,
+    "metadata": {
+      "DatasetId": "b651f073-abd0-4ad2-bb12-45c538284065"
+    }
+  },
+  {
+    "type": "installmentIssued",
+    "effectiveTimestamp": "2025-02-03T00:00:00",
+    "installmentId": "installment4",
+    "transactionId": "transaction1",
+    "consumerId": "consumer1",
+    "amount": {
+      "number": 50.0,
+      "currency": "USD"
+    },
+    "dueTimestamp": "2025-03-17T00:00:00",
+    "index": 3,
     "metadata": {
       "DatasetId": "b651f073-abd0-4ad2-bb12-45c538284065"
     }
@@ -68,12 +81,11 @@
     "type": "installmentPaid",
     "effectiveTimestamp": "2025-02-03T00:00:00",
     "installmentId": "installment1",
-    "orderId": "order1",
     "transactionId": "transaction1",
     "consumerId": "consumer1",
     "amount": {
-      "number": 50.00,
-      "currency": "EUR"
+      "number": 50.0,
+      "currency": "USD"
     },
     "metadata": {
       "DatasetId": "b651f073-abd0-4ad2-bb12-45c538284065"
@@ -81,14 +93,13 @@
   },
   {
     "type": "installmentPaid",
-    "effectiveTimestamp": "2025-03-05T00:00:00",
+    "effectiveTimestamp": "2025-03-17T00:00:00",
     "installmentId": "installment2",
-    "orderId": "order1",
     "transactionId": "transaction1",
     "consumerId": "consumer1",
     "amount": {
-      "number": 50.00,
-      "currency": "EUR"
+      "number": 50.0,
+      "currency": "USD"
     },
     "metadata": {
       "DatasetId": "b651f073-abd0-4ad2-bb12-45c538284065"
@@ -96,14 +107,27 @@
   },
   {
     "type": "installmentPaid",
-    "effectiveTimestamp": "2025-04-04T00:00:00",
+    "effectiveTimestamp": "2025-03-03T00:00:00",
     "installmentId": "installment3",
-    "orderId": "order1",
     "transactionId": "transaction1",
     "consumerId": "consumer1",
     "amount": {
-      "number": 50.00,
-      "currency": "EUR"
+      "number": 50.0,
+      "currency": "USD"
+    },
+    "metadata": {
+      "DatasetId": "b651f073-abd0-4ad2-bb12-45c538284065"
+    }
+  },
+  {
+    "type": "installmentPaid",
+    "effectiveTimestamp": "2025-03-17T00:00:00",
+    "installmentId": "installment4",
+    "transactionId": "transaction1",
+    "consumerId": "consumer1",
+    "amount": {
+      "number": 50.0,
+      "currency": "USD"
     },
     "metadata": {
       "DatasetId": "b651f073-abd0-4ad2-bb12-45c538284065"

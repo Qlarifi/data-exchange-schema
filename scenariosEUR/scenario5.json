@@ -5,7 +5,7 @@
     "transactionId": "transaction1",
     "consumerId": "consumer1",
     "amount": {
-      "number": 150.00,
+      "number": 150.0,
       "currency": "EUR"
     },
     "transactionType": "PayIn30Days",
@@ -17,11 +17,10 @@
     "type": "installmentIssued",
     "effectiveTimestamp": "2025-02-03T00:00:00",
     "installmentId": "installment1",
-    "orderId": "order1",
     "transactionId": "transaction1",
     "consumerId": "consumer1",
     "amount": {
-      "number": 150.00,
+      "number": 150.0,
       "currency": "EUR"
     },
     "dueTimestamp": "2025-03-05T00:00:00",
@@ -34,11 +33,10 @@
     "type": "installmentPaid",
     "effectiveTimestamp": "2025-03-05T00:00:00Z",
     "installmentId": "installment1",
-    "orderId": "order1",
     "transactionId": "transaction1",
     "consumerId": "consumer1",
     "amount": {
-      "number": 150.00,
+      "number": 150.0,
       "currency": "EUR"
     },
     "metadata": {
