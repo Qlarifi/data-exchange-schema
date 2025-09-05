@@ -1,0 +1,8 @@
+{
+  "type": "transactionCanceled",
+  "transactionId": "txn-12345",
+  "reason": "User requested cancellation",
+  "metadata": {},
+  "consumerId": "consumer-12345",
+  "effectiveTimestamp": "2024-01-15T10:30:00+00:00"
+}

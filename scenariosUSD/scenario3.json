@@ -1,128 +1,71 @@
 [
   {
-    "type": "transactionCreated",
-    "effectiveTimestamp": "2025-02-03T00:00:00",
+    "type": "transactionIssued",
     "transactionId": "transaction1",
-    "consumerId": "consumer1",
     "amount": {
       "number": 200.0,
       "currency": "USD"
     },
+    "issuedInstallments": [
+      {
+        "installmentId": "installment1",
+        "amount": {
+          "number": 50.0,
+          "currency": "USD"
+        },
+        "dueTimestamp": "2025-02-03T00:00:00+00:00",
+        "index": 0
+      },
+      {
+        "installmentId": "installment2",
+        "amount": {
+          "number": 50.0,
+          "currency": "USD"
+        },
+        "dueTimestamp": "2025-02-17T00:00:00+00:00",
+        "index": 1
+      },
+      {
+        "installmentId": "installment3",
+        "amount": {
+          "number": 50.0,
+          "currency": "USD"
+        },
+        "dueTimestamp": "2025-03-03T00:00:00+00:00",
+        "index": 2
+      },
+      {
+        "installmentId": "installment4",
+        "amount": {
+          "number": 50.0,
+          "currency": "USD"
+        },
+        "dueTimestamp": "2025-03-17T00:00:00+00:00",
+        "index": 3
+      }
+    ],
     "transactionType": "PayIn4",
     "metadata": {
       "DatasetId": "b61afc4f-4b88-45fa-b2b9-d35b86bc723f"
-    }
+    },
+    "consumerId": "consumer1",
+    "effectiveTimestamp": "2025-02-03T00:00:00+00:00"
   },
   {
-    "type": "installmentIssued",
-    "effectiveTimestamp": "2025-02-03T00:00:00",
+    "type": "installmentPaidOff",
+    "effectiveTimestamp": "2025-02-03T00:00:00+00:00",
     "installmentId": "installment1",
     "transactionId": "transaction1",
     "consumerId": "consumer1",
-    "amount": {
-      "number": 50.0,
-      "currency": "USD"
-    },
-    "dueTimestamp": "2025-02-03T00:00:00",
-    "index": 0,
-    "metadata": {
-      "DatasetId": "b61afc4f-4b88-45fa-b2b9-d35b86bc723f"
-    }
-  },
-  {
-    "type": "installmentIssued",
-    "effectiveTimestamp": "2025-02-03T00:00:00",
-    "installmentId": "installment2",
-    "transactionId": "transaction1",
-    "consumerId": "consumer1",
-    "amount": {
-      "number": 50.0,
-      "currency": "USD"
-    },
-    "dueTimestamp": "2025-02-17T00:00:00",
-    "index": 1,
-    "metadata": {
-      "DatasetId": "b61afc4f-4b88-45fa-b2b9-d35b86bc723f"
-    }
-  },
-  {
-    "type": "installmentIssued",
-    "effectiveTimestamp": "2025-02-03T00:00:00",
-    "installmentId": "installment3",
-    "transactionId": "transaction1",
-    "consumerId": "consumer1",
-    "amount": {
-      "number": 50.0,
-      "currency": "USD"
-    },
-    "dueTimestamp": "2025-03-03T00:00:00",
-    "index": 2,
-    "metadata": {
-      "DatasetId": "b61afc4f-4b88-45fa-b2b9-d35b86bc723f"
-    }
-  },
-  {
-    "type": "installmentIssued",
-    "effectiveTimestamp": "2025-02-03T00:00:00",
-    "installmentId": "installment4",
-    "transactionId": "transaction1",
-    "consumerId": "consumer1",
-    "amount": {
-      "number": 50.0,
-      "currency": "USD"
-    },
-    "dueTimestamp": "2025-03-17T00:00:00",
-    "index": 3,
-    "metadata": {
-      "DatasetId": "b61afc4f-4b88-45fa-b2b9-d35b86bc723f"
-    }
-  },
-  {
-    "type": "installmentPaid",
-    "effectiveTimestamp": "2025-02-03T00:00:00",
-    "installmentId": "installment1",
-    "transactionId": "transaction1",
-    "consumerId": "consumer1",
-    "amount": {
-      "number": 50.0,
-      "currency": "USD"
-    },
+    "paymentId": "payment1",
     "metadata": {
       "DatasetId": "b61afc4f-4b88-45fa-b2b9-d35b86bc723f"
     }
   },
   {
     "type": "feeIssued",
-    "effectiveTimestamp": "2025-02-20T00:00:00",
-    "installmentId": "installment2",
-    "transactionId": "transaction1",
-    "consumerId": "consumer1",
-    "feeAmount": {
-      "number": 3.0,
-      "currency": "USD"
-    },
-    "feeType": "LateFee",
-    "metadata": {
-      "DatasetId": "b61afc4f-4b88-45fa-b2b9-d35b86bc723f"
-    }
-  },
-  {
-    "type": "installmentPaid",
-    "effectiveTimestamp": "2025-02-21T00:00:00",
-    "installmentId": "installment2",
-    "transactionId": "transaction1",
-    "consumerId": "consumer1",
-    "amount": {
-      "number": 50.0,
-      "currency": "USD"
-    },
-    "metadata": {
-      "DatasetId": "b61afc4f-4b88-45fa-b2b9-d35b86bc723f"
-    }
-  },
-  {
-    "type": "feePaid",
-    "effectiveTimestamp": "2025-02-21T00:00:00",
+    "effectiveTimestamp": "2025-02-20T00:00:00+00:00",
+    "feeId": "fee1",
     "installmentId": "installment2",
     "transactionId": "transaction1",
     "consumerId": "consumer1",
@@ -131,33 +74,51 @@
       "currency": "USD"
     },
     "metadata": {
+      "feeType": "LateFee",
       "DatasetId": "b61afc4f-4b88-45fa-b2b9-d35b86bc723f"
     }
   },
   {
-    "type": "installmentPaid",
-    "effectiveTimestamp": "2025-03-03T00:00:00",
+    "type": "installmentPaidOff",
+    "effectiveTimestamp": "2025-02-21T00:00:00+00:00",
+    "installmentId": "installment2",
+    "transactionId": "transaction1",
+    "consumerId": "consumer1",
+    "paymentId": "payment2",
+    "metadata": {
+      "DatasetId": "b61afc4f-4b88-45fa-b2b9-d35b86bc723f"
+    }
+  },
+  {
+    "type": "feePaidOff",
+    "effectiveTimestamp": "2025-02-21T00:00:00+00:00",
+    "feeId": "fee1",
+    "installmentId": "installment2",
+    "transactionId": "transaction1",
+    "consumerId": "consumer1",
+    "paymentId": "payment2",
+    "metadata": {
+      "DatasetId": "b61afc4f-4b88-45fa-b2b9-d35b86bc723f"
+    }
+  },
+  {
+    "type": "installmentPaidOff",
+    "effectiveTimestamp": "2025-03-03T00:00:00+00:00",
     "installmentId": "installment3",
     "transactionId": "transaction1",
     "consumerId": "consumer1",
-    "amount": {
-      "number": 50.0,
-      "currency": "USD"
-    },
+    "paymentId": "payment3",
     "metadata": {
       "DatasetId": "b61afc4f-4b88-45fa-b2b9-d35b86bc723f"
     }
   },
   {
-    "type": "installmentPaid",
-    "effectiveTimestamp": "2025-03-17T00:00:00",
+    "type": "installmentPaidOff",
+    "effectiveTimestamp": "2025-03-17T00:00:00+00:00",
     "installmentId": "installment4",
     "transactionId": "transaction1",
     "consumerId": "consumer1",
-    "amount": {
-      "number": 50.0,
-      "currency": "USD"
-    },
+    "paymentId": "payment4",
     "metadata": {
       "DatasetId": "b61afc4f-4b88-45fa-b2b9-d35b86bc723f"
     }

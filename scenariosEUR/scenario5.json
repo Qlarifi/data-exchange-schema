@@ -1,46 +1,38 @@
 [
   {
-    "type": "transactionCreated",
-    "effectiveTimestamp": "2025-02-03T00:00:00",
+    "type": "transactionIssued",
     "transactionId": "transaction1",
-    "consumerId": "consumer1",
     "amount": {
       "number": 150.0,
       "currency": "EUR"
     },
+    "issuedInstallments": [
+      {
+        "installmentId": "installment1",
+        "amount": {
+          "number": 150.0,
+          "currency": "EUR"
+        },
+        "dueTimestamp": "2025-03-05T00:00:00+00:00",
+        "index": 0
+      }
+    ],
     "transactionType": "PayIn30Days",
     "metadata": {
       "DatasetId": "2d162792-b871-4f9e-8502-fda91845e33c"
-    }
+    },
+    "consumerId": "consumer1",
+    "effectiveTimestamp": "2025-02-03T00:00:00+00:00"
   },
   {
-    "type": "installmentIssued",
-    "effectiveTimestamp": "2025-02-03T00:00:00",
+    "type": "installmentPaidOff",
     "installmentId": "installment1",
     "transactionId": "transaction1",
-    "consumerId": "consumer1",
-    "amount": {
-      "number": 150.0,
-      "currency": "EUR"
-    },
-    "dueTimestamp": "2025-03-05T00:00:00",
-    "index": 0,
+    "paymentId": "payment1",
     "metadata": {
       "DatasetId": "2d162792-b871-4f9e-8502-fda91845e33c"
-    }
-  },
-  {
-    "type": "installmentPaid",
-    "effectiveTimestamp": "2025-03-05T00:00:00Z",
-    "installmentId": "installment1",
-    "transactionId": "transaction1",
-    "consumerId": "consumer1",
-    "amount": {
-      "number": 150.0,
-      "currency": "EUR"
     },
-    "metadata": {
-      "DatasetId": "2d162792-b871-4f9e-8502-fda91845e33c"
-    }
+    "consumerId": "consumer1",
+    "effectiveTimestamp": "2025-03-05T00:00:00+00:00"
   }
 ]

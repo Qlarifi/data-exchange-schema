@@ -1,7 +1,5 @@
 # Event Field Reference
 
-## Qlarifi Identity Events
-
 ### ConsumerIdentityCreated
 * **type**: Indicates the event type. Always consumerIdentityCreated.
 * **effectiveTimestamp**: The timestamp when the consumer identity was created.
@@ -48,123 +46,237 @@
 * **consumerId**: Unique identifier for the consumer.
 * **name**: Object containing the consumer's updated name. The type field indicates the name type.
 
-## Qlarifi Credit Events
 
-### AccountOpened
-* **type**: Indicates the event type; in this case, accountOpened.
-* **effectiveTimestamp**: The timestamp (UTC) when the account was opened from the lender's perspective.
-* **accountId**: A unique identifier for this account.
-* **consumerId**: A unique identifier for the consumer who owns this account (as defined by the lender).
+## Lender Credit Events
 
-### AccountClosed
-* **type**: Indicates the event type; in this case, accountClosed.
-* **effectiveTimestamp**: The timestamp (UTC) when the account was closed from the lender's perspective.
-* **accountId**: A unique identifier for this account.
-* **consumerId**: A unique identifier for the consumer who owns this account (as defined by the lender).
+## Transaction Events
 
 ### TransactionIssued
-* **type**: Indicates the event type; in this case, transactionIssued.
-* **effectiveTimestamp**: The timestamp (UTC) when the transaction was issued from the lender's perspective.
+* **type**: Indicates the event type; always "transactionIssued".
 * **transactionId**: A unique identifier for the transaction.
-* **accountId**: A unique identifier for the account this transaction is associated with.
-* **consumerId**: A unique identifier for the consumer who owes this transaction (as defined by the lender).
+* **consumerId**: A unique identifier for the consumer who owes this transaction (from the lender).
 * **amount.number**: The monetary amount of this transaction.
 * **amount.currency**: The currency of the amount.
-* **transactionType**: The type of transaction product, Possible values are: PayIn3, PayIn4, PayIn30Days.
+* **issuedInstallments**: Array of installments issued with the transaction.
+  * **installmentId**: Unique identifier for the installment.
+  * **amount.number**: The monetary amount due for this installment.
+  * **amount.currency**: The currency of the amount.
+  * **dueTimestamp**: ISO 8601 timestamp when this installment is due.
+  * **index**: The sequential order of this installment within the transaction (0-based).
+* **transactionType**: The type of transaction product. Possible values are: "PayIn3", "PayIn4", "PayIn30Days".
+* **metadata**: Additional metadata about the transaction.
+* **effectiveTimestamp**: ISO 8601 timestamp when the transaction was issued.
 
-### InstallmentIssued
-* **type**: Indicates the event type; in this case, installmentIssued.
-* **effectiveTimestamp**: The timestamp (UTC) when the instalment was issued from the lender's perspective.
-* **installmentId**: A unique identifier for this specific instalment.
-* **transactionId**: A unique identifier for the transaction this instalment belongs to.
-* **accountId**: A unique identifier for the account this instalment is associated with.
-* **consumerId**: A unique identifier for the consumer who owes this instalment (as defined by the lender).
-* **amount.number**: The monetary amount due for this instalment.
-* **amount.currency**: The currency of the amount.
-* **dueTimestamp**: The date and time (UTC) when this instalment is due.
-* **index**: The sequential order of this instalment within the transaction.
+### TransactionApproved
+* **type**: Indicates the event type; always "transactionApproved".
+* **transactionId**: A unique identifier for the approved transaction.
+* **consumerId**: A unique identifier for the consumer.
+* **effectiveTimestamp**: ISO 8601 timestamp when the transaction was approved.
+* **metadata**: Additional metadata about the approval.
 
-### InstallmentPaid
-* **type**: Indicates the event type; in this case, installmentPaid.
-* **effectiveTimestamp**: The timestamp (UTC) when the payment was made from the lender's perspective.
-* **installmentId**: The unique identifier of the instalment that received the payment.
-* **transactionId**: The unique identifier of the transaction the instalment belongs to.
-* **accountId**: A unique identifier for the account this instalment is associated with.
-* **consumerId** [optional]: The unique identifier of the consumer who made the payment.
-* **amount.number**: The amount paid towards the instalment.
-* **amount.currency**: The currency of the payment.
+### TransactionDeclined
+* **type**: Indicates the event type; always "transactionDeclined".
+* **transactionId**: A unique identifier for the declined transaction.
+* **consumerId**: A unique identifier for the consumer.
+* **effectiveTimestamp**: ISO 8601 timestamp when the transaction was declined.
+* **metadata**: Additional metadata about the decline.
 
-### InstallmentRebalanced
-* **type**: Indicates the event type; in this case, installmentRebalanced.
-* **effectiveTimestamp**: The timestamp (UTC) when the rebalance occurred from the lender's perspective.
-* **installmentId**: The unique identifier of the instalment that was rebalanced.
-* **transactionId**: The unique identifier of the transaction the instalment belongs to.
-* **accountId**: A unique identifier for the account this instalment is associated with.
-* **consumerId** [optional]: The unique identifier of the consumer affected by the rebalance.
-* **newAmountDue.number**: The new amount due on the instalment after the rebalance.
-* **newAmountDue.currency**: The currency of the new amount due.
+### TransactionCanceled
+* **type**: Indicates the event type; always "transactionCanceled".
+* **transactionId**: A unique identifier for the canceled transaction.
+* **consumerId**: A unique identifier for the consumer.
+* **effectiveTimestamp**: ISO 8601 timestamp when the transaction was canceled.
+* **metadata**: Additional metadata about the cancellation.
 
-### InstallmentRefunded
-* **type**: Indicates the event type; in this case, installmentRefunded.
-* **effectiveTimestamp**: The timestamp (UTC) when the refund was issued from the lender's perspective.
-* **installmentId**: The unique identifier of the instalment that was refunded.
-* **transactionId**: The unique identifier of the transaction the instalment belongs to.
-* **accountId**: A unique identifier for the account this instalment is associated with.
-* **consumerId**: The unique identifier of the consumer who received the refund.
-* **refundAmount.number**: The amount of the refund issued.
-* **refundAmount.currency**: The currency of the refund.
+### TransactionPaidOff
+* **type**: Indicates the event type; always "transactionPaidOff".
+* **transactionId**: A unique identifier for the paid off transaction.
+* **consumerId**: A unique identifier for the consumer.
+* **paymentId**: (Optional) The ID of the payment that paid off the transaction.
+* **refundId**: (Optional) The ID of the refund that contributed to paying off the transaction.
+* **effectiveTimestamp**: ISO 8601 timestamp when the transaction was paid off.
+* **metadata**: Additional metadata about the payoff.
 
-### InstallmentWrittenOff
-* **type**: Indicates the event type; in this case, installmentWrittenOff.
-* **effectiveTimestamp**: The timestamp (UTC) when the write-off occurred from the lender's perspective.
-* **installmentId**: The unique identifier of the instalment that was written off.
-* **transactionId**: The unique identifier of the transaction the instalment belongs to.
-* **accountId**: A unique identifier for the account this instalment is associated with.
-* **consumerId**: The unique identifier of the consumer whose instalment was written off.
-
-### InstallmentCanceled
-* **type**: Indicates the event type; in this case, installmentCanceled.
-* **effectiveTimestamp**: The timestamp (UTC) when the cancellation occurred from the lender's perspective.
-* **installmentId**: The unique identifier of the cancelled instalment.
-* **transactionId**: The unique identifier of the transaction the instalment belonged to.
-* **accountId**: A unique identifier for the account this instalment is associated with.
-* **consumerId**: The unique identifier of the consumer affected by the cancellation.
-
-### InstallmentPostponed
-* **type**: Indicates the event type; in this case, installmentPostponed.
-* **effectiveTimestamp**: The timestamp (UTC) when the installment was postponed from the lender's perspective.
-* **installmentId**: The unique identifier of the instalment postponed.
-* **transactionId**: The unique identifier of the transaction the instalment belongs to.
-* **accountId**: A unique identifier for the account this instalment is associated with.
-* **consumerId**: The unique identifier of the consumer the instalment belongs to.
-* **feeAmount.number**: The amount of the fee.
-* **feeAmount.currency**: The currency of the fee.
-* **postponedType**: The type of postponed action. Possible values are Customer, LenderCommercial, LenderTechnical.
-
-### InstallmentPenaltyAssessed
-* **type**: Indicates the event type; in this case, installmentPenaltyAssessed.
-* **effectiveTimestamp**: The timestamp (UTC) when the penalty was assessed from the lender's perspective.
-* **installmentId**: The unique identifier of the instalment with the assessed penalty.
-* **transactionId**: The unique identifier of the transaction the instalment belongs to.
-* **accountId**: A unique identifier for the account this instalment is associated with.
-* **consumerId**: The unique identifier of the consumer who incurred the penalty.
-* **penaltyAmount.number**: The amount of the penalty assessed.
-* **penaltyAmount.currency**: The currency of the penalty.
-* **penaltyType**: The type of penalty fee that was added to the transaction amount. Possible values are: LateFee, PostponedFee,Interest, Other.
-
-### FeePaid
-* **type**: Indicates the event type; in this case, feePaid.
-* **effectiveTimestamp**: The timestamp (UTC) when the fee was paid from the lender's perspective.
-* **installmentId** [optional]: The unique identifier of the instalment associated with the fee.
-* **transactionId**: The unique identifier of the transaction associated with the fee.
-* **accountId**: A unique identifier for the account this fee is associated with.
-* **consumerId**: The unique identifier of the consumer who incurred the fee.
-* **amount.number**: The amount paid.
-* **amount.currency**: The currency of the payment.
+### TransactionRefunded
+* **type**: Indicates the event type; always "transactionRefunded".
+* **refundId**: A unique identifier for the refund.
+* **transactionId**: A unique identifier for the refunded transaction.
+* **consumerId**: A unique identifier for the consumer.
+* **amount.number**: The monetary amount of the refund.
+* **amount.currency**: The currency of the refund.
+* **rebalancedInstallments**: Array of installments that were rebalanced due to the refund.
+  * **installmentId**: Unique identifier for the rebalanced installment.
+  * **amount.number**: The new amount owed on the installment.
+  * **amount.currency**: The currency of the amount.
+* **rebalancedFees**: Array of fees that were rebalanced due to the refund.
+  * **feeId**: Unique identifier for the rebalanced fee.
+  * **amount.number**: The new amount owed on the fee.
+  * **amount.currency**: The currency of the amount.
+* **effectiveTimestamp**: ISO 8601 timestamp when the refund was processed.
+* **metadata**: Additional metadata about the refund.
 
 ### TransactionWrittenOff
-* **type**: Indicates the event type; in this case, transactionWrittenOff.
-* **effectiveTimestamp**: The timestamp (UTC) when the write-off occurred from the lender's perspective.
-* **transactionId**: The unique identifier of the transaction written off.
-* **accountId**: A unique identifier for the account this transaction is associated with.
-* **consumerId**: The unique identifier of the consumer whose transaction was written off.
+* **type**: Indicates the event type; always "transactionWrittenOff".
+* **transactionId**: A unique identifier for the written off transaction.
+* **consumerId**: A unique identifier for the consumer.
+* **amount.number**: The monetary amount that was written off.
+* **amount.currency**: The currency of the written off amount.
+* **effectiveTimestamp**: ISO 8601 timestamp when the transaction was written off.
+* **metadata**: Additional metadata about the write-off.
+
+## Installment Events
+
+### InstallmentPaidOff
+* **type**: Indicates the event type; always "installmentPaidOff".
+* **installmentId**: A unique identifier for the paid off installment.
+* **transactionId**: A unique identifier for the transaction the installment belongs to.
+* **consumerId**: A unique identifier for the consumer.
+* **paymentId**: (Optional) The ID of the payment that paid off the installment.
+* **refundId**: (Optional) The ID of the refund that contributed to paying off the installment.
+* **effectiveTimestamp**: ISO 8601 timestamp when the installment was paid off.
+* **metadata**: Additional metadata about the payoff.
+
+### InstallmentCanceled
+* **type**: Indicates the event type; always "installmentCanceled".
+* **installmentId**: A unique identifier for the canceled installment.
+* **transactionId**: A unique identifier for the transaction the installment belongs to.
+* **consumerId**: A unique identifier for the consumer.
+* **effectiveTimestamp**: ISO 8601 timestamp when the installment was canceled.
+* **metadata**: Additional metadata about the cancellation.
+
+### InstallmentDefaulted
+* **type**: Indicates the event type; always "installmentDefaulted".
+* **installmentId**: A unique identifier for the defaulted installment.
+* **transactionId**: A unique identifier for the transaction the installment belongs to.
+* **consumerId**: A unique identifier for the consumer.
+* **effectiveTimestamp**: ISO 8601 timestamp when the installment was marked as defaulted.
+* **metadata**: Additional metadata about the default.
+
+### InstallmentPostponed
+* **type**: Indicates the event type; always "installmentPostponed".
+* **installmentId**: A unique identifier for the postponed installment.
+* **transactionId**: A unique identifier for the transaction the installment belongs to.
+* **consumerId**: A unique identifier for the consumer.
+* **newDueTimestamp**: ISO 8601 timestamp for the new due date of the installment.
+* **postponedType**: (Optional) The type/reason for postponement (e.g., "Consumer").
+* **effectiveTimestamp**: ISO 8601 timestamp when the postponement was applied.
+* **metadata**: Additional metadata about the postponement.
+
+### InstallmentRebalanced
+* **type**: Indicates the event type; always "installmentRebalanced".
+* **installmentId**: A unique identifier for the rebalanced installment.
+* **transactionId**: A unique identifier for the transaction the installment belongs to.
+* **consumerId**: A unique identifier for the consumer.
+* **amount.number**: The new amount due on the installment after the rebalance.
+* **amount.currency**: The currency of the new amount due.
+* **reason**: (Optional) The reason for the rebalance.
+* **effectiveTimestamp**: ISO 8601 timestamp when the rebalance occurred.
+* **metadata**: Additional metadata about the rebalance.
+
+
+### InstallmentWrittenOff
+* **type**: Indicates the event type; always "installmentWrittenOff".
+* **installmentId**: A unique identifier for the written off installment.
+* **transactionId**: A unique identifier for the transaction the installment belongs to.
+* **consumerId**: A unique identifier for the consumer.
+* **amount.number**: The monetary amount that was written off.
+* **amount.currency**: The currency of the written off amount.
+* **effectiveTimestamp**: ISO 8601 timestamp when the installment was written off.
+* **metadata**: Additional metadata about the write-off.
+
+## Fee Events
+
+
+
+### FeeIssued
+* **type**: Indicates the event type; always "feeIssued".
+* **feeId**: A unique identifier for the fee.
+* **transactionId**: A unique identifier for the transaction the fee is associated with.
+* **consumerId**: A unique identifier for the consumer who incurred the fee.
+* **amount.number**: The monetary amount of the fee.
+* **amount.currency**: The currency of the fee.
+* **effectiveTimestamp**: ISO 8601 timestamp when the fee was issued.
+* **metadata**: Additional metadata about the fee.
+
+### FeeCanceled
+* **type**: Indicates the event type; always "feeCanceled".
+* **feeId**: A unique identifier for the canceled fee.
+* **transactionId**: A unique identifier for the transaction the fee was associated with.
+* **consumerId**: A unique identifier for the consumer.
+* **effectiveTimestamp**: ISO 8601 timestamp when the fee was canceled.
+* **metadata**: Additional metadata about the cancellation.
+
+### FeePaidOff
+* **type**: Indicates the event type; always "feePaidOff".
+* **feeId**: A unique identifier for the paid off fee.
+* **transactionId**: A unique identifier for the transaction the fee was associated with.
+* **consumerId**: A unique identifier for the consumer.
+* **paymentId**: (Optional) The ID of the payment that paid off the fee.
+* **effectiveTimestamp**: ISO 8601 timestamp when the fee was paid off.
+* **metadata**: Additional metadata about the payoff.
+
+### FeeRebalanced
+* **type**: Indicates the event type; always "feeRebalanced".
+* **feeId**: A unique identifier for the rebalanced fee.
+* **transactionId**: A unique identifier for the transaction the fee is associated with.
+* **consumerId**: A unique identifier for the consumer.
+* **amount.number**: The new amount due on the fee after the rebalance.
+* **amount.currency**: The currency of the new amount due.
+* **effectiveTimestamp**: ISO 8601 timestamp when the rebalance occurred.
+* **metadata**: Additional metadata about the rebalance.
+
+### FeeWrittenOff
+* **type**: Indicates the event type; always "feeWrittenOff".
+* **feeId**: A unique identifier for the written off fee.
+* **transactionId**: A unique identifier for the transaction the fee was associated with.
+* **consumerId**: A unique identifier for the consumer.
+* **amount.number**: The monetary amount that was written off.
+* **amount.currency**: The currency of the written off amount.
+* **effectiveTimestamp**: ISO 8601 timestamp when the fee was written off.
+* **metadata**: Additional metadata about the write-off.
+
+## Payment Events
+
+### PaymentAuthorized
+* **type**: Indicates the event type; always "paymentAuthorized".
+* **paymentId**: A unique identifier for the payment.
+* **transactionId**: A unique identifier for the transaction the payment is associated with.
+* **consumerId**: A unique identifier for the consumer who made the payment.
+* **amount.number**: The monetary amount of the payment.
+* **amount.currency**: The currency of the payment.
+* **paymentDetails**: Object containing payment method details.
+  * **type**: The payment method type (e.g., "card").
+  * **last4**: Last 4 digits of the payment method (for cards).
+  * **brand**: Brand of the payment method (e.g., "visa", "mastercard").
+* **effectiveTimestamp**: ISO 8601 timestamp when the payment was authorized.
+* **metadata**: Additional metadata about the authorization.
+
+### PaymentCaptured
+* **type**: Indicates the event type; always "paymentCaptured".
+* **paymentId**: A unique identifier for the payment.
+* **transactionId**: A unique identifier for the transaction the payment is associated with.
+* **consumerId**: A unique identifier for the consumer who made the payment.
+* **amount.number**: The monetary amount of the payment.
+* **amount.currency**: The currency of the payment.
+* **paymentDetails**: Object containing payment method details.
+  * **type**: The payment method type (e.g., "card").
+  * **last4**: Last 4 digits of the payment method (for cards).
+  * **brand**: Brand of the payment method (e.g., "visa", "mastercard").
+* **effectiveTimestamp**: ISO 8601 timestamp when the payment was captured.
+* **metadata**: Additional metadata about the capture.
+
+### PaymentFailed
+* **type**: Indicates the event type; always "paymentFailed".
+* **paymentId**: A unique identifier for the failed payment.
+* **transactionId**: A unique identifier for the transaction the payment was associated with.
+* **consumerId**: A unique identifier for the consumer who attempted the payment.
+* **amount.number**: The monetary amount of the attempted payment.
+* **amount.currency**: The currency of the attempted payment.
+* **reason**: The reason for the payment failure. Possible values include: "InsufficientFunds", "CardDeclined", "ExpiredCard", etc.
+* **paymentDetails**: Object containing payment method details.
+  * **type**: The payment method type (e.g., "card").
+  * **last4**: Last 4 digits of the payment method (for cards).
+  * **brand**: Brand of the payment method (e.g., "visa", "mastercard").
+* **effectiveTimestamp**: ISO 8601 timestamp when the payment failed.
+* **metadata**: Additional metadata about the failure.
+

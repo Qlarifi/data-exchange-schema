@@ -1,0 +1,41 @@
+{
+  "type": "transactionIssued",
+  "transactionId": "txn-12345",
+  "amount": {
+    "number": 300.00,
+    "currency": "USD"
+  },
+  "issuedInstallments": [
+    {
+      "installmentId": "inst-12345",
+      "amount": {
+        "number": 100.00,
+        "currency": "USD"
+      },
+      "dueTimestamp": "2024-02-14T10:30:00+00:00",
+      "index": 1
+    },
+    {
+      "installmentId": "inst-67890",
+      "amount": {
+        "number": 100.00,
+        "currency": "USD"
+      },
+      "dueTimestamp": "2024-03-15T10:30:00+00:00",
+      "index": 2
+    },
+    {
+      "installmentId": "inst-10111",
+      "amount": {
+        "number": 100.00,
+        "currency": "USD"
+      },
+      "dueTimestamp": "2024-04-15T10:30:00+00:00",
+      "index": 3
+    }
+  ],
+  "transactionType": "PayIn3",
+  "metadata": {},
+  "consumerId": "consumer-12345",
+  "effectiveTimestamp": "2024-01-15T10:30:00+00:00"
+}

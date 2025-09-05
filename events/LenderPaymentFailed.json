@@ -1,0 +1,19 @@
+{
+  "type": "paymentFailed",
+  "paymentId": "pay-12345",
+  "amount": {
+    "number": 100.00,
+    "currency": "USD"
+  },
+  "paymentDetails": {
+    "type": "card",
+    "cardLast4": "1234",
+    "cardBrand": "visa",
+    "expiryMonth": 12,
+    "expiryYear": 2025
+  },
+  "reason": "InsufficientFunds",
+  "metadata": {},
+  "consumerId": "consumer-12345",
+  "effectiveTimestamp": "2024-01-15T10:30:00+00:00"
+}

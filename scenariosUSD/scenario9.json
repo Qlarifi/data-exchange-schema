@@ -1,113 +1,81 @@
 [
   {
-    "type": "transactionCreated",
-    "effectiveTimestamp": "2025-02-03T00:00:00",
+    "type": "transactionIssued",
     "transactionId": "transaction1",
-    "consumerId": "consumer1",
     "amount": {
       "number": 200.0,
       "currency": "USD"
     },
+    "issuedInstallments": [
+      {
+        "installmentId": "installment1",
+        "amount": {
+          "number": 50.0,
+          "currency": "USD"
+        },
+        "dueTimestamp": "2025-02-03T00:00:00+00:00",
+        "index": 0
+      },
+      {
+        "installmentId": "installment2",
+        "amount": {
+          "number": 50.0,
+          "currency": "USD"
+        },
+        "dueTimestamp": "2025-02-17T00:00:00+00:00",
+        "index": 1
+      },
+      {
+        "installmentId": "installment3",
+        "amount": {
+          "number": 50.0,
+          "currency": "USD"
+        },
+        "dueTimestamp": "2025-03-03T00:00:00+00:00",
+        "index": 2
+      },
+      {
+        "installmentId": "installment4",
+        "amount": {
+          "number": 50.0,
+          "currency": "USD"
+        },
+        "dueTimestamp": "2025-03-17T00:00:00+00:00",
+        "index": 3
+      }
+    ],
     "transactionType": "PayIn4",
     "metadata": {
       "DatasetId": "763cec3e-5247-41ff-b0e8-ed211c70642b"
-    }
+    },
+    "consumerId": "consumer1",
+    "effectiveTimestamp": "2025-02-03T00:00:00+00:00"
   },
   {
-    "type": "installmentIssued",
-    "effectiveTimestamp": "2025-02-03T00:00:00",
+    "type": "installmentPaidOff",
+    "effectiveTimestamp": "2025-02-03T00:00:00+00:00",
     "installmentId": "installment1",
     "transactionId": "transaction1",
     "consumerId": "consumer1",
-    "amount": {
-      "number": 50.0,
-      "currency": "USD"
-    },
-    "dueTimestamp": "2025-02-03T00:00:00",
-    "index": 0,
+    "paymentId": "payment1",
     "metadata": {
       "DatasetId": "763cec3e-5247-41ff-b0e8-ed211c70642b"
     }
   },
   {
-    "type": "installmentIssued",
-    "effectiveTimestamp": "2025-02-03T00:00:00",
+    "type": "installmentPaidOff",
+    "effectiveTimestamp": "2025-02-17T00:00:00+00:00",
     "installmentId": "installment2",
     "transactionId": "transaction1",
     "consumerId": "consumer1",
-    "amount": {
-      "number": 50.0,
-      "currency": "USD"
-    },
-    "dueTimestamp": "2025-02-17T00:00:00",
-    "index": 1,
-    "metadata": {
-      "DatasetId": "763cec3e-5247-41ff-b0e8-ed211c70642b"
-    }
-  },
-  {
-    "type": "installmentIssued",
-    "effectiveTimestamp": "2025-02-03T00:00:00",
-    "installmentId": "installment3",
-    "transactionId": "transaction1",
-    "consumerId": "consumer1",
-    "amount": {
-      "number": 50.0,
-      "currency": "USD"
-    },
-    "dueTimestamp": "2025-03-03T00:00:00",
-    "index": 2,
-    "metadata": {
-      "DatasetId": "763cec3e-5247-41ff-b0e8-ed211c70642b"
-    }
-  },
-  {
-    "type": "installmentIssued",
-    "effectiveTimestamp": "2025-02-03T00:00:00",
-    "installmentId": "installment4",
-    "transactionId": "transaction1",
-    "consumerId": "consumer1",
-    "amount": {
-      "number": 50.0,
-      "currency": "USD"
-    },
-    "dueTimestamp": "2025-03-17T00:00:00",
-    "index": 3,
-    "metadata": {
-      "DatasetId": "763cec3e-5247-41ff-b0e8-ed211c70642b"
-    }
-  },
-  {
-    "type": "installmentPaid",
-    "effectiveTimestamp": "2025-02-03T00:00:00",
-    "installmentId": "installment1",
-    "transactionId": "transaction1",
-    "consumerId": "consumer1",
-    "amount": {
-      "number": 50.0,
-      "currency": "USD"
-    },
-    "metadata": {
-      "DatasetId": "763cec3e-5247-41ff-b0e8-ed211c70642b"
-    }
-  },
-  {
-    "type": "installmentPaid",
-    "effectiveTimestamp": "2025-02-17T00:00:00",
-    "installmentId": "installment2",
-    "transactionId": "transaction1",
-    "consumerId": "consumer1",
-    "amount": {
-      "number": 50.0,
-      "currency": "USD"
-    },
+    "paymentId": "payment2",
     "metadata": {
       "DatasetId": "763cec3e-5247-41ff-b0e8-ed211c70642b"
     }
   },
   {
     "type": "installmentWrittenOff",
-    "effectiveTimestamp": "2025-09-01T00:00:00",
+    "effectiveTimestamp": "2025-09-01T00:00:00+00:00",
     "installmentId": "installment3",
     "transactionId": "transaction1",
     "consumerId": "consumer1",
@@ -122,7 +90,7 @@
   },
   {
     "type": "installmentWrittenOff",
-    "effectiveTimestamp": "2025-09-01T00:00:00",
+    "effectiveTimestamp": "2025-09-01T00:00:00+00:00",
     "installmentId": "installment4",
     "transactionId": "transaction1",
     "consumerId": "consumer1",
