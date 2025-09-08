@@ -135,7 +135,7 @@
     "installmentId": "installment3",
     "transactionId": "transaction1",
     "consumerId": "consumer1",
-    "penaltyAmount": {
+    "feeAmount": {
       "number": 2.0,
       "currency": "USD"
     },
