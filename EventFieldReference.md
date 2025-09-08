@@ -192,9 +192,10 @@
 * **type**: Indicates the event type; always "feeIssued".
 * **feeId**: A unique identifier for the fee.
 * **transactionId**: A unique identifier for the transaction the fee is associated with.
-* **consumerId**: A unique identifier for the consumer who incurred the fee.
 * **amount.number**: The monetary amount of the fee.
 * **amount.currency**: The currency of the fee.
+* **installmentId**: A unique identifier for the installment the fee is associated with.
+* **consumerId**: A unique identifier for the consumer who incurred the fee.
 * **effectiveTimestamp**: ISO 8601 timestamp when the fee was issued.
 * **metadata**: Additional metadata about the fee.
 

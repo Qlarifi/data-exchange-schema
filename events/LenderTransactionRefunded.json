@@ -6,24 +6,6 @@
     "number": 100.00,
     "currency": "USD"
   },
-  "rebalancedInstallments": [
-    {
-      "installmentId": "inst-12345",
-      "amount": {
-        "number": 50.00,
-        "currency": "USD"
-      }
-    }
-  ],
-  "rebalancedFees": [
-    {
-      "feeId": "fee-12345",
-      "amount": {
-        "number": 25.00,
-        "currency": "USD"
-      }
-    }
-  ],
   "metadata": {},
   "consumerId": "consumer-12345",
   "effectiveTimestamp": "2024-01-15T10:30:00+00:00"
