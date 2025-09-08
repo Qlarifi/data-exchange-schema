@@ -1,0 +1,3 @@
+effectiveTimestamp,type,consumerId,transactionId,installmentId,reason,newAmountDue.number,newAmountDue.currency,metadata.DatasetId
+2025-02-05T00:00:00,installmentRebalanced,consumer2,transaction-usd-4,installment4,refunded,0.0,USD,cd55b51b-33cf-4ecb-8c63-4fa26100fe31
+2025-02-05T00:00:00,installmentRebalanced,consumer2,transaction-usd-4,installment3,refunded,35.0,USD,cd55b51b-33cf-4ecb-8c63-4fa26100fe31

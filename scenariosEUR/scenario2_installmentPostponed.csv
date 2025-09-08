@@ -1,0 +1,3 @@
+effectiveTimestamp,type,consumerId,transactionId,installmentId,postponedType,newDueTimestamp,metadata.DatasetId
+2025-03-04T00:00:00,installmentPostponed,consumer1,transaction-eur-2,installment2,Consumer,2025-03-12T00:00:00+00:00,a8c5c056-6966-4c04-b450-56cf875727ba
+2025-03-04T00:00:00,installmentPostponed,consumer1,transaction-eur-2,installment3,Consumer,2025-04-11T00:00:00+00:00,a8c5c056-6966-4c04-b450-56cf875727ba

@@ -1,0 +1,4 @@
+effectiveTimestamp,type,consumerId,transactionId,installmentId,reason,newAmountDue.number,newAmountDue.currency,metadata.DatasetId
+2025-02-05T00:00:00,installmentRebalanced,consumer3,transaction-eur-8,installment1,refunded,13.33,EUR,032084e6-7393-4351-836a-50ae6acb4f30
+2025-02-05T00:00:00,installmentRebalanced,consumer3,transaction-eur-8,installment2,refunded,13.33,EUR,032084e6-7393-4351-836a-50ae6acb4f30
+2025-02-05T00:00:00,installmentRebalanced,consumer3,transaction-eur-8,installment3,refunded,13.34,EUR,032084e6-7393-4351-836a-50ae6acb4f30
