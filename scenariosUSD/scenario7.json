@@ -107,7 +107,7 @@
   },
   {
     "type": "refundIssued",
-    "effectiveTimestamp": "2025-02-265T00:00:00",
+    "effectiveTimestamp": "2025-02-26T00:00:00",
     "refundId": "refund1",
     "transactionId": "transaction-usd-7",
     "consumerId": "consumer3",
