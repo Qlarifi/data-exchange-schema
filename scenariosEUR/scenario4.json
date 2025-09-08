@@ -2,7 +2,7 @@
   {
     "type": "transactionCreated",
     "effectiveTimestamp": "2025-02-03T00:00:00",
-    "transactionId": "transaction1",
+    "transactionId": "transaction-eur-4",
     "consumerId": "consumer1",
     "amount": {
       "number": 150.0,
@@ -17,7 +17,7 @@
     "type": "installmentIssued",
     "effectiveTimestamp": "2025-02-03T00:00:00",
     "installmentId": "installment1",
-    "transactionId": "transaction1",
+    "transactionId": "transaction-eur-4",
     "consumerId": "consumer1",
     "amount": {
       "number": 50.0,
@@ -33,7 +33,7 @@
     "type": "installmentIssued",
     "effectiveTimestamp": "2025-02-03T00:00:00",
     "installmentId": "installment2",
-    "transactionId": "transaction1",
+    "transactionId": "transaction-eur-4",
     "consumerId": "consumer1",
     "amount": {
       "number": 50.0,
@@ -49,7 +49,7 @@
     "type": "installmentIssued",
     "effectiveTimestamp": "2025-02-03T00:00:00",
     "installmentId": "installment3",
-    "transactionId": "transaction1",
+    "transactionId": "transaction-eur-4",
     "consumerId": "consumer1",
     "amount": {
       "number": 50.0,
@@ -65,7 +65,7 @@
     "type": "installmentPaid",
     "effectiveTimestamp": "2025-02-03T00:00:00",
     "installmentId": "installment1",
-    "transactionId": "transaction1",
+    "transactionId": "transaction-eur-4",
     "consumerId": "consumer1",
     "amount": {
       "number": 50.0,
@@ -79,7 +79,7 @@
     "type": "refundIssued",
     "effectiveTimestamp": "2025-02-05T00:00:00",
     "refundId": "refund1",
-    "transactionId": "transaction1",
+    "transactionId": "transaction-eur-4",
     "consumerId": "consumer1",
     "amount": {
       "number": 65.0,
@@ -93,7 +93,7 @@
     "type": "installmentRebalanced",
     "effectiveTimestamp": "2025-02-05T00:00:00",
     "installmentId": "installment2",
-    "transactionId": "transaction1",
+    "transactionId": "transaction-eur-4",
     "consumerId": "consumer1",
     "newAmountDue": {
       "number": 35.0,
@@ -108,7 +108,7 @@
     "type": "installmentRebalanced",
     "effectiveTimestamp": "2025-02-05T00:00:00",
     "installmentId": "installment3",
-    "transactionId": "transaction1",
+    "transactionId": "transaction-eur-4",
     "consumerId": "consumer1",
     "newAmountDue": {
       "number": 0.0,
@@ -123,7 +123,7 @@
     "type": "installmentPaid",
     "effectiveTimestamp": "2025-03-05T00:00:00",
     "installmentId": "installment2",
-    "transactionId": "transaction1",
+    "transactionId": "transaction-eur-4",
     "consumerId": "consumer1",
     "amount": {
       "number": 35.0,

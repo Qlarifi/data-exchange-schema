@@ -2,7 +2,7 @@
   {
     "type": "transactionCreated",
     "effectiveTimestamp": "2025-02-03T00:00:00",
-    "transactionId": "transaction1",
+    "transactionId": "transaction-usd-5",
     "consumerId": "consumer1",
     "amount": {
       "number": 150.0,
@@ -17,7 +17,7 @@
     "type": "installmentIssued",
     "effectiveTimestamp": "2025-02-03T00:00:00",
     "installmentId": "installment1",
-    "transactionId": "transaction1",
+    "transactionId": "transaction-usd-5",
     "consumerId": "consumer1",
     "amount": {
       "number": 150.0,
@@ -33,7 +33,7 @@
     "type": "installmentPaid",
     "effectiveTimestamp": "2025-03-05T00:00:00Z",
     "installmentId": "installment1",
-    "transactionId": "transaction1",
+    "transactionId": "transaction-usd-5",
     "consumerId": "consumer1",
     "amount": {
       "number": 150.0,
