@@ -1,0 +1,2 @@
+effectiveTimestamp,type,consumerId,transactionId,installmentId,feeType,feeAmount.number,feeAmount.currency
+2025-03-04T00:00:00,feeIssued,consumer1,transaction-eur-2,installment2,PostponedFee,2.0,EUR

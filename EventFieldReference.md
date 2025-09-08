@@ -6,11 +6,18 @@
 * **type**: Indicates the event type. Always consumerIdentityCreated.
 * **effectiveTimestamp**: The timestamp when the consumer identity was created.
 * **consumerId**: Unique identifier for the consumer (from the lender).
-* **name**: Object containing the consumer's name. The type field indicates the name type (westernName in this example).
+* **name.type**: The type of name object. Always "WesternName".
+* **name.first**: The consumer's first name.
+* **name.last**: The consumer's last name.
 * **dateOfBirth**: The consumer's date of birth.
 * **phone**: The consumer's phone number.
 * **email**: The consumer's email address.
-* **address**: Object containing the consumer's address. The type field indicates the address type (euAddress shown, but others are possible).
+* **address.type**: The type of address. Always "USAddress" for now.
+* **address.streetAddress1**: The first line of the street address.
+* **address.streetAddress2**: The second line of the street address (if any).
+* **address.city**: The city of the address.
+* **address.state**: The state or region of the address.
+* **address.zipCode**: The postal code of the address.
 
 ### ConsumerIdentityVerified
 * **type**: Indicates the event type. Always consumerIdentityVerified.
@@ -34,7 +41,12 @@
 * **type**: Indicates the event type. Always consumerAddressChanged.
 * **effectiveTimestamp**: The timestamp when the address was changed.
 * **consumerId**: Unique identifier for the consumer.
-* **address**: Object containing the consumer's updated address. The type field indicates the address type.
+* **address.type**: The type of address. Always "USAddress" for now.
+* **address.streetAddress1**: The first line of the street address.
+* **address.streetAddress2**: The second line of the street address (if any).
+* **address.city**: The city of the address.
+* **address.state**: The state or region of the address.
+* **address.zipCode**: The postal code of the address.
 
 ### ConsumerDateOfBirthChanged
 * **type**: Indicates the event type. Always consumerDateOfBirthChanged.
@@ -46,7 +58,9 @@
 * **type**: Indicates the event type. Always consumerNameChanged.
 * **effectiveTimestamp**: The timestamp when the name was changed.
 * **consumerId**: Unique identifier for the consumer.
-* **name**: Object containing the consumer's updated name. The type field indicates the name type.
+* **name.type**: The type of name object. Always "WesternName".
+* **name.first**: The consumer's first name.
+* **name.last**: The consumer's last name.
 
 ## Qlarifi Credit Events
 

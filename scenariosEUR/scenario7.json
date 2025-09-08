@@ -2,8 +2,8 @@
   {
     "type": "transactionCreated",
     "effectiveTimestamp": "2025-02-03T00:00:00",
-    "transactionId": "transaction1",
-    "consumerId": "consumer1",
+    "transactionId": "transaction-eur-7",
+    "consumerId": "consumer3",
     "amount": {
       "number": 150.0,
       "currency": "EUR"
@@ -17,8 +17,8 @@
     "type": "installmentIssued",
     "effectiveTimestamp": "2025-02-03T00:00:00",
     "installmentId": "installment1",
-    "transactionId": "transaction1",
-    "consumerId": "consumer1",
+    "transactionId": "transaction-eur-7",
+    "consumerId": "consumer3",
     "amount": {
       "number": 50.0,
       "currency": "EUR"
@@ -33,8 +33,8 @@
     "type": "installmentIssued",
     "effectiveTimestamp": "2025-02-03T00:00:00",
     "installmentId": "installment2",
-    "transactionId": "transaction1",
-    "consumerId": "consumer1",
+    "transactionId": "transaction-eur-7",
+    "consumerId": "consumer3",
     "amount": {
       "number": 50.0,
       "currency": "EUR"
@@ -49,8 +49,8 @@
     "type": "installmentIssued",
     "effectiveTimestamp": "2025-02-03T00:00:00",
     "installmentId": "installment3",
-    "transactionId": "transaction1",
-    "consumerId": "consumer1",
+    "transactionId": "transaction-eur-7",
+    "consumerId": "consumer3",
     "amount": {
       "number": 50.0,
       "currency": "EUR"
@@ -65,8 +65,8 @@
     "type": "installmentPaid",
     "effectiveTimestamp": "2025-02-03T00:00:00",
     "installmentId": "installment1",
-    "transactionId": "transaction1",
-    "consumerId": "consumer1",
+    "transactionId": "transaction-eur-7",
+    "consumerId": "consumer3",
     "amount": {
       "number": 50.0,
       "currency": "EUR"
@@ -79,8 +79,8 @@
     "type": "refundIssued",
     "effectiveTimestamp": "2025-02-05T00:00:00",
     "refundId": "refund1",
-    "transactionId": "transaction1",
-    "consumerId": "consumer1",
+    "transactionId": "transaction-eur-7",
+    "consumerId": "consumer3",
     "amount": {
       "number": 110,
       "currency": "EUR"
@@ -93,8 +93,8 @@
     "type": "installmentRebalanced",
     "effectiveTimestamp": "2025-02-05T00:00:00",
     "installmentId": "installment3",
-    "transactionId": "transaction1",
-    "consumerId": "consumer1",
+    "transactionId": "transaction-eur-7",
+    "consumerId": "consumer3",
     "newAmountDue": {
       "number": 0,
       "currency": "EUR"
@@ -108,8 +108,8 @@
     "type": "installmentRebalanced",
     "effectiveTimestamp": "2025-02-05T00:00:00",
     "installmentId": "installment2",
-    "transactionId": "transaction1",
-    "consumerId": "consumer1",
+    "transactionId": "transaction-eur-7",
+    "consumerId": "consumer3",
     "newAmountDue": {
       "number": 0,
       "currency": "EUR"
@@ -123,8 +123,8 @@
     "type": "installmentRebalanced",
     "effectiveTimestamp": "2025-02-05T00:00:00",
     "installmentId": "installment1",
-    "transactionId": "transaction1",
-    "consumerId": "consumer1",
+    "transactionId": "transaction-eur-7",
+    "consumerId": "consumer3",
     "newAmountDue": {
       "number": 40,
       "currency": "EUR"
