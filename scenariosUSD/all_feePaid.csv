@@ -1,0 +1,3 @@
+effectiveTimestamp,type,consumerId,transactionId,installmentId,amount.number,amount.currency,metadata.DatasetId
+2025-03-10T00:00:00,feePaid,consumer1,transaction-usd-2,installment3,2.0,USD,
+2025-02-21T00:00:00,feePaid,consumer1,transaction-usd-3,installment2,3.0,USD,b61afc4f-4b88-45fa-b2b9-d35b86bc723f

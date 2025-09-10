@@ -1,5 +1,9 @@
 # EUR-based Scenarios
 
+For each scenario, we created a JSON & JSONL file with all the events, as well as the corresponding CSV files for each event type in that scenario.
+
+Also provided are a set of CSV files (one for each event type) of all the aggregated scenarios.
+
 ## Scenario 1-EUR
 Transaction of €150 with 3 installments, all paid on time.
 

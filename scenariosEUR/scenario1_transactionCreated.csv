@@ -1,0 +1,2 @@
+effectiveTimestamp,type,consumerId,transactionId,transactionType,amount.number,amount.currency,metadata.DatasetId
+2025-02-03T00:00:00,transactionCreated,consumer1,transaction-eur-1,PayIn3,150.0,EUR,b61afc4f-4b88-45fa-b2b9-d35b86bc723f
