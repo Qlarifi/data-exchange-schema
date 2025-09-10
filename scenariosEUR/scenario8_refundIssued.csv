@@ -1,2 +1,0 @@
-effectiveTimestamp,type,consumerId,transactionId,refundId,amount.number,amount.currency,metadata.DatasetId
-2025-02-05T00:00:00,refundIssued,consumer3,transaction-eur-8,refund1,110.0,EUR,032084e6-7393-4351-836a-50ae6acb4f30

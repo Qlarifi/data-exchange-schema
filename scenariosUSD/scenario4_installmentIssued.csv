@@ -1,5 +1,0 @@
-effectiveTimestamp,type,consumerId,transactionId,installmentId,amount.number,amount.currency,dueTimestamp,index,metadata.DatasetId
-2025-02-03T00:00:00,installmentIssued,consumer2,transaction-usd-4,installment1,50.0,USD,2025-02-03T00:00:00,0,cd55b51b-33cf-4ecb-8c63-4fa26100fe31
-2025-02-03T00:00:00,installmentIssued,consumer2,transaction-usd-4,installment2,50.0,USD,2025-02-17T00:00:00,1,cd55b51b-33cf-4ecb-8c63-4fa26100fe31
-2025-02-03T00:00:00,installmentIssued,consumer2,transaction-usd-4,installment3,50.0,USD,2025-03-03T00:00:00,2,cd55b51b-33cf-4ecb-8c63-4fa26100fe31
-2025-02-03T00:00:00,installmentIssued,consumer2,transaction-usd-4,installment4,50.0,USD,2025-03-17T00:00:00,3,cd55b51b-33cf-4ecb-8c63-4fa26100fe31

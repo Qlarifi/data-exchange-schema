@@ -1,86 +1,63 @@
 [
   {
-    "type": "transactionCreated",
-    "effectiveTimestamp": "2025-02-03T00:00:00",
-    "transactionId": "transaction-eur-9",
-    "consumerId": "consumer3",
+    "type": "transactionIssued",
+    "transactionId": "transaction1",
     "amount": {
       "number": 150.0,
       "currency": "EUR"
     },
+    "issuedInstallments": [
+      {
+        "installmentId": "installment1",
+        "amount": {
+          "number": 50.0,
+          "currency": "EUR"
+        },
+        "dueTimestamp": "2025-02-03T00:00:00+00:00",
+        "index": 0
+      },
+      {
+        "installmentId": "installment2",
+        "amount": {
+          "number": 50.0,
+          "currency": "EUR"
+        },
+        "dueTimestamp": "2025-03-05T00:00:00+00:00",
+        "index": 1
+      },
+      {
+        "installmentId": "installment3",
+        "amount": {
+          "number": 50.0,
+          "currency": "EUR"
+        },
+        "dueTimestamp": "2025-04-04T00:00:00+00:00",
+        "index": 2
+      }
+    ],
     "transactionType": "PayIn3",
     "metadata": {
       "DatasetId": "763cec3e-5247-41ff-b0e8-ed211c70642b"
-    }
+    },
+    "consumerId": "consumer1",
+    "effectiveTimestamp": "2025-02-03T00:00:00+00:00"
   },
   {
-    "type": "installmentIssued",
-    "effectiveTimestamp": "2025-02-03T00:00:00",
+    "type": "installmentPaidOff",
     "installmentId": "installment1",
-    "transactionId": "transaction-eur-9",
-    "consumerId": "consumer3",
-    "amount": {
-      "number": 50.0,
-      "currency": "EUR"
-    },
-    "dueTimestamp": "2025-02-03T00:00:00",
-    "index": 0,
+    "transactionId": "transaction1",
+    "paymentId": "payment1",
     "metadata": {
       "DatasetId": "763cec3e-5247-41ff-b0e8-ed211c70642b"
-    }
-  },
-  {
-    "type": "installmentIssued",
-    "effectiveTimestamp": "2025-02-03T00:00:00",
-    "installmentId": "installment2",
-    "transactionId": "transaction-eur-9",
-    "consumerId": "consumer3",
-    "amount": {
-      "number": 50.0,
-      "currency": "EUR"
     },
-    "dueTimestamp": "2025-03-05T00:00:00",
-    "index": 1,
-    "metadata": {
-      "DatasetId": "763cec3e-5247-41ff-b0e8-ed211c70642b"
-    }
-  },
-  {
-    "type": "installmentIssued",
-    "effectiveTimestamp": "2025-02-03T00:00:00",
-    "installmentId": "installment3",
-    "transactionId": "transaction-eur-9",
-    "consumerId": "consumer3",
-    "amount": {
-      "number": 50.0,
-      "currency": "EUR"
-    },
-    "dueTimestamp": "2025-04-04T00:00:00",
-    "index": 2,
-    "metadata": {
-      "DatasetId": "763cec3e-5247-41ff-b0e8-ed211c70642b"
-    }
-  },
-  {
-    "type": "installmentPaid",
-    "effectiveTimestamp": "2025-02-03T00:00:00",
-    "installmentId": "installment1",
-    "transactionId": "transaction-eur-9",
-    "consumerId": "consumer3",
-    "amount": {
-      "number": 50.0,
-      "currency": "EUR"
-    },
-    "metadata": {
-      "DatasetId": "763cec3e-5247-41ff-b0e8-ed211c70642b"
-    }
+    "consumerId": "consumer1",
+    "effectiveTimestamp": "2025-02-03T00:00:00+00:00"
   },
   {
     "type": "installmentWrittenOff",
-    "effectiveTimestamp": "2025-09-01T00:00:00",
     "installmentId": "installment1",
-    "transactionId": "transaction-eur-9",
-    "consumerId": "consumer3",
+    "transactionId": "transaction1",
+    "consumerId": "consumer1",
     "amount": {
       "number": 50.0,
       "currency": "EUR"
@@ -88,14 +65,14 @@
     "reason": "ConsumerDefault",
     "metadata": {
       "DatasetId": "763cec3e-5247-41ff-b0e8-ed211c70642b"
-    }
+    },
+    "effectiveTimestamp": "2025-09-01T00:00:00+00:00"
   },
   {
     "type": "installmentWrittenOff",
-    "effectiveTimestamp": "2025-09-01T00:00:00",
     "installmentId": "installment1",
-    "transactionId": "transaction-eur-9",
-    "consumerId": "consumer3",
+    "transactionId": "transaction1",
+    "consumerId": "consumer1",
     "amount": {
       "number": 50.0,
       "currency": "EUR"
@@ -103,6 +80,7 @@
     "reason": "ConsumerDefault",
     "metadata": {
       "DatasetId": "763cec3e-5247-41ff-b0e8-ed211c70642b"
-    }
+    },
+    "effectiveTimestamp": "2025-09-01T00:00:00+00:00"
   }
 ]

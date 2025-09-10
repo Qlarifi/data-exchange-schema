@@ -1,0 +1,4 @@
+effectiveTimestamp,type,consumerId,transactionId,refundId,amount.number,amount.currency,metadata.DatasetId
+2025-02-05T00:00:00+00:00,transactionRefunded,consumer1,transaction1,refund1,65.0,EUR,cd55b51b-33cf-4ecb-8c63-4fa26100fe31
+2025-02-05T00:00:00+00:00,transactionRefunded,consumer1,transaction1,refund1,110,EUR,4565466c-4c74-42b3-b4d5-1606d1d89fce
+2025-02-05T00:00:00+00:00,transactionRefunded,consumer1,transaction1,refund1,110.0,EUR,032084e6-7393-4351-836a-50ae6acb4f30
