@@ -1,2 +1,0 @@
-effectiveTimestamp,type,consumerId,transactionId,installmentId,amount.number,amount.currency
-2025-03-12T00:00:00,feePaid,consumer1,transaction-eur-2,installment3,2.0,EUR

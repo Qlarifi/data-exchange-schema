@@ -1,0 +1,2 @@
+effectiveTimestamp,type,consumerId,transactionId,installmentId,metadata.DatasetId,paymentId
+2025-03-05T00:00:00+00:00,installmentPaidOff,consumer1,transaction1,installment1,2d162792-b871-4f9e-8502-fda91845e33c,payment1

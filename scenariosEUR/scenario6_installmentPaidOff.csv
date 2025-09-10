@@ -1,0 +1,7 @@
+effectiveTimestamp,type,consumerId,transactionId,installmentId,metadata.DatasetId,paymentId
+2025-02-04T00:00:00+00:00,installmentPaidOff,consumer1,transaction1,installment1,d6337daa-22a4-4094-99ff-7a6bf981113e,payment1
+2025-02-08T00:00:00+00:00,installmentPaidOff,consumer1,transaction1,installment1,d6337daa-22a4-4094-99ff-7a6bf981113e,payment2
+2025-03-06T00:00:00+00:00,installmentPaidOff,consumer1,transaction1,installment2,d6337daa-22a4-4094-99ff-7a6bf981113e,payment3
+2025-03-10T00:00:00+00:00,installmentPaidOff,consumer1,transaction1,installment2,d6337daa-22a4-4094-99ff-7a6bf981113e,payment4
+2025-04-05T00:00:00+00:00,installmentPaidOff,consumer1,transaction1,installment3,d6337daa-22a4-4094-99ff-7a6bf981113e,payment5
+2025-04-09T00:00:00+00:00,installmentPaidOff,consumer1,transaction1,installment3,d6337daa-22a4-4094-99ff-7a6bf981113e,payment6

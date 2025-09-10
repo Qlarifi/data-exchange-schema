@@ -1,2 +1,2 @@
-effectiveTimestamp,type,consumerId,transactionId,installmentId,feeType,feeAmount.number,feeAmount.currency
-2025-03-02T00:00:00,feeIssued,consumer1,transaction-usd-2,installment3,PostponedFee,2.0,USD
+effectiveTimestamp,type,consumerId,transactionId,installmentId,amount.number,amount.currency,metadata.feeType,feeId
+2025-03-02T00:00:00+00:00,feeIssued,consumer1,transaction1,installment3,2.0,USD,PostponedFee,fee1

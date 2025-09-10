@@ -1,0 +1,2 @@
+effectiveTimestamp,type,consumerId,transactionId,transactionType,amount.number,amount.currency,metadata.DatasetId,issuedInstallments
+2025-02-03T00:00:00+00:00,transactionIssued,consumer1,transaction1,PayIn30Days,150.0,EUR,2d162792-b871-4f9e-8502-fda91845e33c,"[{'installmentId': 'installment1', 'amount': {'number': 150.0, 'currency': 'EUR'}, 'dueTimestamp': '2025-03-05T00:00:00+00:00', 'index': 0}]"

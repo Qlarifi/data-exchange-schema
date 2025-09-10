@@ -1,4 +1,0 @@
-effectiveTimestamp,type,consumerId,transactionId,installmentId,amount.number,amount.currency,metadata.DatasetId
-2025-02-03T00:00:00,installmentPaid,consumer3,transaction-eur-8,installment1,50.0,EUR,032084e6-7393-4351-836a-50ae6acb4f30
-2025-03-05T00:00:00,installmentPaid,consumer3,transaction-eur-8,installment2,13.33,EUR,032084e6-7393-4351-836a-50ae6acb4f30
-2025-04-04T00:00:00,installmentPaid,consumer3,transaction-eur-8,installment3,13.34,EUR,032084e6-7393-4351-836a-50ae6acb4f30
